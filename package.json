@@ -1,0 +1,20 @@
+{
+  "name": "devtree_project",
+  "version": "1.0.0",
+  "description": "Proyecto Node con Express y TS",
+  "homepage": "https://github.com/raulsr92/Proyecto-DevTree-Integracion-Aplicaciones#readme",
+  "bugs": {
+    "url": "https://github.com/raulsr92/Proyecto-DevTree-Integracion-Aplicaciones/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raulsr92/Proyecto-DevTree-Integracion-Aplicaciones.git"
+  },
+  "license": "ISC",
+  "author": "Raul Sanchez",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
