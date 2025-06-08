@@ -8,14 +8,10 @@ const router = Router()
 
 router.post('/auth/register', (req,res)=>{
     //console.log("Desde register consola")
-    
     //res.send("Desde registro si")
-
     console.log("Obteniendo data de request")
-
     console.log(req.body)
     res.send(req.body)
-
 })
 
 
