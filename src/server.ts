@@ -8,7 +8,11 @@ import router from "./router"
 
 const app = express()
 
+//Habilitar la lectura de datos
 
+app.use(express.json())
+
+//Endpoint principal
 app.use("/", router)
 
 export default app
