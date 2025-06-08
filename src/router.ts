@@ -17,7 +17,7 @@ router.get('/blog',(req,res)=>{
 })
 
 router.get('/contacto',(req,res)=>{
-    res.send("Este es la zona para contactos")
+    res.send("Este es la zona para contactos 2025")
 })
 
 export default router
