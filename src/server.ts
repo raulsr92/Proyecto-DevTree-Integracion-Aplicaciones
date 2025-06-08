@@ -9,7 +9,7 @@ const app = express()
 // Routing
 
 app.get('/',(req,res)=>{
-    res.send("Hola mundo desde express")
+    res.send("Hola mundo desde express en el 2025")
 })
 
 app.get('/ecommerce',(req,res)=>{
@@ -24,9 +24,5 @@ app.get('/contacto',(req,res)=>{
     res.send("Este es la zona para contactos")
 })
 
-// Crear (inicializar) servidor
 
-app.listen(4000,()=>{
-    console.log("Servidor Levantado")
-})
-
+export default app
