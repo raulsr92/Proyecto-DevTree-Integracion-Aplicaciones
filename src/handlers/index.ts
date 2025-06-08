@@ -12,10 +12,28 @@ export const createAccount = async (req:Request,res:Response)=>{
         if (!req.body.name || !req.body.email || !req.body.password) {
             return res.status(400).json({ error: "Faltan datos requeridos" })
         }
-        const user = new UserModel(req.body)
-        await user.save()
 
-        res.status(201).json({ mensaje:"Usuario registrado exitosamente"})
+        const {email} = req.body
+
+        const userExists = await UserModel.findOne({email})
+
+        if(userExists){
+            const error = new Error("El usuario ya está registrado")
+
+            return res.status(409).json({error:error.message})
+
+            console.log("El usuario ya está registrado")
+        } else{
+            
+            console.log("El usuario no está registrado aun")
+
+            const user = new UserModel(req.body)
+            await user.save()
+
+            res.status(201).json({ mensaje:"Usuario registrado exitosamente"})
+        }
+
+
 
     } catch (error) {
          console.error("Error al registrar usuario:", error);
