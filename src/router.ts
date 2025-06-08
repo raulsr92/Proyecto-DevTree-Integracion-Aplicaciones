@@ -1,17 +1,24 @@
 import {Router} from "express"
-
+import UserModel from "./models/User"
 const router = Router()
 
 // Routing
 
 //----Autenticacion
 
+/*
 router.post('/auth/register', (req,res)=>{
     //console.log("Desde register consola")
     //res.send("Desde registro si")
     console.log("Obteniendo data de request")
     console.log(req.body)
     res.send(req.body)
+})*/
+
+router.post('/auth/register', async (req,res)=>{
+    await UserModel.create(req.body)
+
+    res.send("Usuario registrado exitosamente")
 })
 
 
