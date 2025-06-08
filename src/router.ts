@@ -16,7 +16,14 @@ router.post('/auth/register', (req,res)=>{
 })*/
 
 router.post('/auth/register', async (req,res)=>{
-    await UserModel.create(req.body)
+    //Forma 1
+    /* await UserModel.create(req.body)*/
+
+    //Forma 2: Instanciando el modelo
+
+    const user = new UserModel(req.body)
+
+    await user.save()
 
     res.send("Usuario registrado exitosamente")
 })
